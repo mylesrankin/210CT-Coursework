@@ -1,3 +1,5 @@
+# by @mylesrankin (github), evaluates number to specify the use of a certain formula
+
 x = 2
 
 if x < -2:

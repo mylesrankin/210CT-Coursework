@@ -1,7 +1,7 @@
-date = "25 09 2016"
-d = int(date[0:2])
-m = int(date[3:5])
-y = int(date[6:10])
+'''
+by @mylesrankin (github)
+a function for calculating days passed and left in a year
+'''
 
 def daysLeft(d,m,y):
     months = [31,28,31,30,31,30,31,31,30,31,30,31]
@@ -18,7 +18,12 @@ def daysLeft(d,m,y):
     print(soFar)
     print("Days left: ")
     print(daysLeft)
-    
-        
+
+'''
+date = "25 09 2016"
+d = int(date[0:2])
+m = int(date[3:5])
+y = int(date[6:10])
+'''
     
     

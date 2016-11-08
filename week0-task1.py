@@ -1,4 +1,3 @@
-# Week 0 Task 1
 a = float(input("enter a: "))
 b = float(input("enter b: "))
 c = float(input("enter c: "))
