@@ -17,9 +17,12 @@ def selectHighest(array):
     for i in array:
         if len(i) > arrayLen:
             arrayLen = len(i)
+            highestSequences = []
             highestSequences.append(i)
-        elif len(i) == arrayLen:
-            break
+        elif len(i) == arrayLen: # if two sub-s are the same size
+            highestSequences.append(i)
+    return(highestSequences)
+        
    
 def sequences(l):
     a = []
@@ -36,8 +39,11 @@ def sequences(l):
             s = stack()
     return(a)
     
-            
-    print("list:" , a)
+# Seperate sub-sequences
+sequences([1,2,3,4,1,2,3,6,5,6,7,8])
+
+# Seperate sub-sequences and return highest sequence(s)
+selectHighest(sequences([1,2,3,4,1,2,3,6,5,6,7,8]))
             
             
             
