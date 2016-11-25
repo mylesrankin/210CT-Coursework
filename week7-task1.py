@@ -66,6 +66,9 @@ class Graph:
                     visited.append(u)
                     for e in self.graphDict[u]:
                          s.push(e)
+          f = open("dfs.txt","w")
+          f.write(str(visited))
+          f.close
           return visited
 
      def breadthFirstSearch(self,startVertex):
@@ -79,6 +82,9 @@ class Graph:
                for edge in self.graphDict[u]:
                     if edge not in visited:
                          q.enqueue(edge)
+          f = open("bfs.txt","w")
+          f.write(str(visited))
+          f.close
           return visited
           
           
