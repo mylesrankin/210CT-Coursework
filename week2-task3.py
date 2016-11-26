@@ -1,24 +1,30 @@
-
 ADD_MATRIX(M1,M2)
     RESULT = EMPTY MATRIX # Imagine matrix as 2d array i.e. [[1,2][3,4]]
-    FOR I IN M1
-        FOR J IN I
+    FOR I IN (0 TO LEN(M1)-1)
+        FOR J IN (0 TO LEN(I)-1)
             RESULT[I][J] = M1[I][J] + M2[I][J]
+    RETURN RESULT
         
 
 SUB_MATRIX(M1,M2)
     RESULT = EMPTY MATRIX # Imagine matrix as 2d array i.e. [[1,2][3,4]]
-    FOR I IN LEN(M1)
-        FOR J IN LEN(I)
+    FOR I IN (0 TO LEN(M1)-1)
+        FOR J IN (0 TO LEN(I)-1)
             RESULT[I][J] = M1[I][J] - M2[I][J]
+    RETURN RESULT
 
 MULT_MATRIX(M1,M2)
-    
+    RESULT = EMPTY MATRIX
+    FOR I IN (0 TO LEN(M1)-1 # Iterates through rows of M1
+        FOR J IN (0 TO LEN(M2[0])) # Iterates through columns of M2
+              FOR K IN (0 TO LEN(M2)) # Iterates through rows of M2
+                  RESULT[I][J] <- M1[I][K] * M2[K][J] # row * column
+    RETURN RESULT
     
 
-A <- INSERT(MATRIX_A)
-B <- INSERT(MATRIX_B)
-C <- INSERT(MATRIX_C)
+A <- INPUT(MATRIX_A)
+B <- INPUT(MATRIX_B)
+C <- INPUT(MATRIX_C)
 
 A <- B*C+2*(B+C)
 
