@@ -1,3 +1,10 @@
+'''
+by @mylesrankin (github)
+Reverses words in a sentence.
+Example input: reverseWords("hello you") will return ("you hello")
+Uses splitting then iterates from end of the split list of words
+'''
+
 def reverseWords(sentence):
     sentence = sentence.split()     # split list into words
     result = []     # create list for the reversed result

@@ -7,4 +7,5 @@ def removeVowels(n,d=0):
     else:
         return removeVowels((n[1:]+n[0]),d+1) # return list but with n[0] at end so i.e. input vowels = owelsv
 
+# Example of removing vowels from a string
 print(removeVowels("Ellie"))

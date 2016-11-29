@@ -32,11 +32,19 @@ def postorder(tree):
  
  
 def in_order(tree):
-    if(tree.left!=None):
-        in_order(tree.left)
-    print(tree.value)
-    if(tree.right!=None):
-        in_order(tree.right)
+    stack = []
+    finished = False
+    while(finished == False):
+        if tree != None:
+            stack.append(tree)
+            tree = tree.left
+        else:
+            if(len(stack) > 0):
+                tree = stack.pop()
+                print(tree.value)
+                tree = tree.right
+            else:
+                finished = True
  
 if __name__ == '__main__':
    
