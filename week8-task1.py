@@ -58,7 +58,7 @@ class Graph:
      def displayAdjacencyList(self):
           for k,v in self.graphDict.items():
                print(k , "|", v)
-
+     '''
      def dijkstra(self,start,end): # start = source node, end = destination, distances = tentative weights
           distances={}
           visited = []
@@ -71,7 +71,7 @@ class Graph:
                for k in self.graphDict[v]: # k,w for key : weight in graphDict[v]
                     if distances[v]+self.graphDict[v][k] < distances[k]:
                          distances[k] = distances[v]+self.graphDict[v][k]
-                         previous[v] = 
+                         
                print(visited)
                visited.append(v)
                _min = math.inf
@@ -79,9 +79,11 @@ class Graph:
                     if (n not in visited) and (distances[n] < _min):
                          v = n
                          _min = distances[n]
-          return visited
+          return visited '''
                
-
+     def dijkstra(self,start,destination,visited=[],distances={},predecessors={}):
+          
+          
      def shortestpath(self,start,end,visited=[],distances={},predecessors={}):
     # we've found our end node, now find the path to it, and return
          if start==end:
